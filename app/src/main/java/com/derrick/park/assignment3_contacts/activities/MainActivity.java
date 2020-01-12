@@ -1,8 +1,9 @@
 package com.derrick.park.assignment3_contacts.activities;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.derrick.park.assignment3_contacts.R;
 import com.derrick.park.assignment3_contacts.models.Contact;
