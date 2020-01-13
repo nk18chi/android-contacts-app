@@ -33,13 +33,10 @@ class ContactsViewModel : ViewModel() {
      */
     private fun getContactProperties() {
         coroutineScope.launch {
-            println("Run viewmodel getContactProperties")
             val getContactsDeferred = ContactsApi.retrofitService.getProperties(20)
             try {
                 val listResult = getContactsDeferred.await().contactList
                 _contactsList.value = listResult
-                println("Run get list")
-                println(listResult)
             } catch (e: Exception) {
                 _contactsList.value = ArrayList()
             }

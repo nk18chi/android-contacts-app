@@ -1,9 +1,7 @@
 package com.derrick.park.assignment3_contacts.list
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,8 +9,7 @@ import com.derrick.park.assignment3_contacts.databinding.ListViewContactItemBind
 import com.derrick.park.assignment3_contacts.network.ContactsProperty
 
 class ContactsAdapter : ListAdapter<ContactsProperty, ContactsAdapter.ContactsPropertyViewHolder>(DiffCallback) {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactsAdapter.ContactsPropertyViewHolder {
-        println("Run adapter onCreateViewHolder")
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactsPropertyViewHolder {
         return ContactsPropertyViewHolder(ListViewContactItemBinding.inflate(
                 LayoutInflater.from(parent.context)))
     }
@@ -35,7 +32,6 @@ class ContactsAdapter : ListAdapter<ContactsProperty, ContactsAdapter.ContactsPr
     class ContactsPropertyViewHolder(private var binding: ListViewContactItemBinding):
             RecyclerView.ViewHolder(binding.root) {
         fun bind(contactsProperty: ContactsProperty) {
-            println("Run adapter bind")
             binding.contact = contactsProperty
             binding.executePendingBindings()
         }

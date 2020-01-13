@@ -23,7 +23,6 @@ class ContactsFragment : Fragment() {
      */
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        println("Run fragment")
         val binding = FragmentContactsBinding.inflate(inflater)
         val adapter = ContactsAdapter()
 
