@@ -6,7 +6,7 @@
     android:padding="12dp">
 
     <TextView
-        android:id="@+id/textView_headline"
+        android:id="@+id/textView_index"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"

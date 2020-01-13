@@ -19,7 +19,6 @@
             android:id="@+id/contactList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:listData="@{viewModel.contactsList}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
          />
 

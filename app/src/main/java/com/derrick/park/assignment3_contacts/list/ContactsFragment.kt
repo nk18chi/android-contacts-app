@@ -4,6 +4,7 @@ package com.derrick.park.assignment3_contacts.list
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.derrick.park.assignment3_contacts.databinding.FragmentContactsBinding
 
@@ -32,6 +33,12 @@ class ContactsFragment : Fragment() {
         // Giving the binding access to the OverviewViewModel
         binding.viewModel = viewModel
         binding.contactList.adapter = adapter
+
+        viewModel.contactsList.observe(this, Observer {
+            it?.let {
+                adapter.sortByNameAndAddIndex(it)
+            }
+        })
 
         setHasOptionsMenu(true)
         return binding.root

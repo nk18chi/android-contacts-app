@@ -38,7 +38,6 @@ class ContactsViewModel : ViewModel() {
                 val listResult = getContactsDeferred.await().contactList
                 _contactsList.value = listResult
             } catch (e: Exception) {
-                _contactsList.value = ArrayList()
             }
         }
     }
