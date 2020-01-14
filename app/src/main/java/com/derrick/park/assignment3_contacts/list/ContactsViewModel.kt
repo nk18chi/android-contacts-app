@@ -46,6 +46,12 @@ class ContactsViewModel : ViewModel() {
         }
     }
 
+    fun addContact(contact: ContactsProperty) {
+        _contactsList.value?.let {
+            _contactsList.value = it + contact
+        }
+    }
+
     fun onAddContactClicked() {
         _navigateToAddContact.value = true
     }

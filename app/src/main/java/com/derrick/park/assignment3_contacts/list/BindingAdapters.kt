@@ -1,11 +1,14 @@
 package com.derrick.park.assignment3_contacts.list
 
 import androidx.databinding.BindingAdapter
-import androidx.recyclerview.widget.RecyclerView
-import com.derrick.park.assignment3_contacts.network.ContactsProperty
+import android.widget.TextView
 
-//@BindingAdapter("listData")
-//fun bindRecyclerView(recyclerView: RecyclerView, data: List<ContactsProperty>?) {
-//    val adapter = recyclerView.adapter as ContactsAdapter
-//    adapter.submitList(data)
-//}
+@BindingAdapter("fullNameString")
+fun setFullNameString(textView: TextView, fullName: String?) {
+    fullName?.let { textView.text = it }
+}
+
+@BindingAdapter("cellString")
+fun setCellString(textView: TextView, cell: String?) {
+    cell?.let { textView.text = it }
+}

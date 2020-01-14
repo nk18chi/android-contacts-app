@@ -24,14 +24,16 @@
                     android:id="@+id/nameTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{contact.name.first}" />
+                    android:text="@{contact.name.getFullName}"
+                    tools:text="Steve Jobs " />
 
                 <TextView
                     android:id="@+id/phoneTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@{contact.cell}" />
+                    android:text="@{contact.cell}"
+                    tools:text="000-000-0000" />
 
 
         </LinearLayout>

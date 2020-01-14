@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".add.AddContactFragment">
+    >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.derrick.park.assignment3_contacts.add.AddContactViewModel" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context=".addition.AdditionFragment">
+        tools:context=".add.AddContactFragment">
 
         <TextView
             android:layout_width="match_parent"
@@ -45,9 +49,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:enabled="false"
             android:text="@string/btn_text_add_submit" />
 
     </LinearLayout>
 
-</FrameLayout>
+</layout>

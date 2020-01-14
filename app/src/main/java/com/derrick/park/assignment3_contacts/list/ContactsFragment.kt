@@ -50,6 +50,11 @@ class ContactsFragment : Fragment() {
             }
         })
 
+        arguments?.let {
+            viewModel.addContact(ContactsFragmentArgs.fromBundle(arguments!!).newContact)
+            arguments = null
+        }
+
         setHasOptionsMenu(true)
         return binding.root
     }

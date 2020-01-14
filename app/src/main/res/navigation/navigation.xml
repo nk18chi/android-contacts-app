@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/contactsFragment"
         android:name="com.derrick.park.assignment3_contacts.list.ContactsFragment"
-        android:label="fragment_contacts"
+        android:label="contacts"
         tools:layout="@layout/fragment_contacts" >
         <action
             android:id="@+id/action_contactsFragment_to_addContactFragment"
@@ -20,10 +20,13 @@
     <fragment
         android:id="@+id/addContactFragment"
         android:name="com.derrick.park.assignment3_contacts.add.AddContactFragment"
-        android:label="fragment_add_contact"
+        android:label="add_contact"
         tools:layout="@layout/fragment_add_contact" >
         <action
             android:id="@+id/action_addContactFragment_to_contactsFragment"
-            app:destination="@id/contactsFragment" />
+            app:destination="@id/contactsFragment"
+            app:popUpTo="@+id/contactsFragment"
+            app:popUpToInclusive="false"
+            app:launchSingleTop="false"/>
     </fragment>
 </navigation>
