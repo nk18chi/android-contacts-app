@@ -21,9 +21,6 @@ class ContactsAdapter : ListAdapter<ContactDataItem, RecyclerView.ViewHolder>(Di
     private val adapterScope = CoroutineScope(Dispatchers.Default)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-//        return ContactsPropertyViewHolder(ListViewContactItemBinding.inflate(
-//                LayoutInflater.from(parent.context)))
-
         return when (viewType) {
             0 -> IndexViewHolder.from(parent)
             1 -> ContactsPropertyViewHolder.from(parent)

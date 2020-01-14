@@ -21,6 +21,10 @@ class ContactsViewModel : ViewModel() {
     private var viewModelJob = Job()
     private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main )
 
+    private val _navigateToAddContact = MutableLiveData<Boolean>()
+    val navigateToAddContact: LiveData<Boolean>
+        get() = _navigateToAddContact
+
     /**
      * Call getMarsRealEstateProperties() on init so we can display status immediately.
      */
@@ -40,6 +44,14 @@ class ContactsViewModel : ViewModel() {
             } catch (e: Exception) {
             }
         }
+    }
+
+    fun onAddContactClicked() {
+        _navigateToAddContact.value = true
+    }
+
+    fun onAddContactNavigated() {
+        _navigateToAddContact.value = null
     }
 
     override fun onCleared() {

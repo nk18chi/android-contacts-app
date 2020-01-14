@@ -9,10 +9,21 @@
         android:id="@+id/contactsFragment"
         android:name="com.derrick.park.assignment3_contacts.list.ContactsFragment"
         android:label="fragment_contacts"
-        tools:layout="@layout/fragment_contacts" />
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_contactsFragment_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+        <argument
+            android:name="newContact"
+            app:argType="com.derrick.park.assignment3_contacts.network.ContactsProperty" />
+    </fragment>
     <fragment
         android:id="@+id/addContactFragment"
-        android:name="com.derrick.park.assignment3_contacts.AddContactFragment"
+        android:name="com.derrick.park.assignment3_contacts.add.AddContactFragment"
         android:label="fragment_add_contact"
-        tools:layout="@layout/fragment_add_contact" />
+        tools:layout="@layout/fragment_add_contact" >
+        <action
+            android:id="@+id/action_addContactFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+    </fragment>
 </navigation>

@@ -67,4 +67,5 @@ dependencies {
     // Retrofit & Gson
     implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$version_retrofit"
+    implementation 'androidx.mediarouter:mediarouter:1.1.0'
 }
